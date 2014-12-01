@@ -36,13 +36,13 @@ public class MainActivity extends ActionBarActivity {
         final Button btn_login = (Button)findViewById(R.id.btn_login);
         btn_login.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                //if(username.equals(String.valueOf(input_username.getText())) && secret.equals(String.valueOf(input_password.getText())) ){
+                if(username.equals(String.valueOf(input_username.getText())) && secret.equals(String.valueOf(input_password.getText())) ){
                     startActivity(new Intent(getApplicationContext(), MainMenu.class));
-                //}
-                //else {
-                //    TextView label_error = (TextView)findViewById(R.id.label_error_login);
-                //    label_error.setVisibility(View.VISIBLE);
-                //}
+                }
+                else {
+                    TextView label_error = (TextView)findViewById(R.id.label_error_login);
+                    label_error.setVisibility(View.VISIBLE);
+                }
             }
         });
     }

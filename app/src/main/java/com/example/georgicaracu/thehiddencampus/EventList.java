@@ -1,10 +1,13 @@
 package com.example.georgicaracu.thehiddencampus;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 
 
@@ -15,8 +18,13 @@ public class EventList extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_list);
 
-        //Spinner spinner = (Spinner)findViewById(R.id.spinner);
-        //ArrayAdapter<String> spinnerAdapter = ArrayAdapter.createFromResource(this, R.array.spinner_filter, R.id.);
+        LinearLayout itemEvent = (LinearLayout)findViewById(R.id.itemEvent);
+        itemEvent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), ViewEvent.class));
+            }
+        });
     }
 
 

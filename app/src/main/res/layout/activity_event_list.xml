@@ -24,8 +24,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/searchView"
-                android:layout_weight="1"
-                android:background="@drawable/custom_border" />
+                android:background="@drawable/custom_border"
+                android:layout_weight="1" />
 
             <Spinner
                 android:layout_width="fill_parent"
@@ -38,7 +38,7 @@
                 android:dropDownSelector="@drawable/abc_spinner_mtrl_am_alpha"
                 android:prompt="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha"
                 style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Menu"
-                android:layout_weight="6" />
+                android:layout_weight="1" />
         </LinearLayout>
 
         <LinearLayout
@@ -71,7 +71,8 @@
             android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/transparent_and_border">
+            android:background="@drawable/transparent_and_border"
+            android:id="@+id/itemEvent">
 
             <LinearLayout
                 android:orientation="horizontal"
